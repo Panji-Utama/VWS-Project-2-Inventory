@@ -1,0 +1,24 @@
+:root {
+  --primaryColor: #3a4d39;
+  --secondaryColor: #4f6f52;
+  --thirdColor: #739072;
+  --accentColor: #ece3ce;
+}
+
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--thirdColor);
+  width: 100%;
+}
+
+#nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-left img {
+  max-width: 4rem;
+  border-radius: 50%;
+}
