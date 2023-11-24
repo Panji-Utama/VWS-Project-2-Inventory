@@ -1,70 +1,81 @@
+:root {
+  --primaryColor: #3a4d39;
+  --secondaryColor: #4f6f52;
+  --thirdColor: #739072;
+  --accentColor: #ece3ce;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ECE3CE;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primaryColor);
+  color: var(--accentColor);
 }
 
-.site-header, .site-footer {
-    background-color: #739072;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondaryColor);
+  padding: 1rem;
 }
 
-.site-main {
-    padding: 1rem;
+.logo {
+  font-size: 1.5rem;
+  color: var(--accentColor);
 }
 
-.inventory-section {
-    margin-bottom: 2rem;
+.search-bar input,
+.login-form input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: none;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.login-form button {
+  background-color: var(--thirdColor);
+  color: var(--accentColor);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-input, textarea, button {
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #3A4D39;
-    width: 100%; /* Full width for smaller screens */
+.carousel {
+  overflow: hidden;
+  white-space: nowrap; /* Ensures items are in a single line */
 }
 
-button {
-    background-color: #4F6F52;
-    color: white;
-    cursor: pointer;
+.carousel-track {
+  display: inline-flex; /* Changed to inline-flex */
+  /* animation: scrollLeft 1s linear infinite; */
 }
 
-button:hover {
-    background-color: #3A4D39;
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-100% / 2)
+    ); /* Adjust based on the number of items */
+  }
 }
 
-.site-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #739072;
-    color: white;
+.carousel-item {
+  display: inline-block; /* Ensure items are inline */
+  margin-right: 20px;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .site-header, .site-footer {
-        padding: 0.5rem;
-    }
+.carousel-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
 
-    .site-main {
-        padding: 0.5rem;
-    }
-
-    form {
-        gap: 0.5rem;
-    }
-
-    input, textarea, button {
-        padding: 0.25rem;
-    }
+.modal {
+  /* Modal styling goes here */
 }
