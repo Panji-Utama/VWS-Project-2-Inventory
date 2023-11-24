@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inventory Management System</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="navbar">
-            <div class="logo">InventorySys</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search items...">
-            </div>
-            <div class="login-form">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button>Login</button>
-            </div>
+      <div class="navbar">
+        <div class="logo">InventorySys</div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search items..." />
+          <button id="search-button">Search</button>
         </div>
+        <div class="login-form">
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Login</button>
+        </div>
+      </div>
     </header>
     <main>
-        <div id="item-carousel" class="carousel">
-            <div class="carousel-track">
-                <!-- Items will be dynamically loaded here -->
-            </div>
-        </div>
+      <div class="welcome-container">
+        <h1>Welcome to InventorySys</h1>
+        <p>Manage your inventory efficiently and effectively.</p>
+      </div>
     </main>
-    <div id="itemModal" class="modal">
-        <!-- Modal content -->
-    </div>
-    <script src="js/script.js"></script>
-</body>
+
+    <footer>
+      <p>&copy; 2023 InventorySys. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

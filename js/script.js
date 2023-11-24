@@ -23,6 +23,8 @@ function createCarousel(items) {
   });
 }
 
+// I think I will change a few things. The navbar would be exactly the same, but put a "search" button beside the search textfield, so the searching would only be done and shown after pressing the button. Then I wont implement the modal, row, moving images, etc. It would now be a welcome text and details on what the website is all about. Then dont forget to add footer to it too. Use the color palette that I gave. Give me all the html css js code
+
 document.addEventListener("DOMContentLoaded", async () => {
   const items = await fetchItems();
   if (items && items.length > 0) {

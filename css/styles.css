@@ -5,12 +5,22 @@
   --accentColor: #ece3ce;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: var(--primaryColor);
   color: var(--accentColor);
+}
+
+main {
+  flex: 1;
 }
 
 .navbar {
@@ -34,6 +44,7 @@ body {
   border: none;
 }
 
+.search-bar button,
 .login-form button {
   background-color: var(--thirdColor);
   color: var(--accentColor);
@@ -43,39 +54,49 @@ body {
   cursor: pointer;
 }
 
-.carousel {
-  overflow: hidden;
-  white-space: nowrap; /* Ensures items are in a single line */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* Adjust height as needed */
+  text-align: center;
 }
 
-.carousel-track {
-  display: inline-flex; /* Changed to inline-flex */
-  /* animation: scrollLeft 1s linear infinite; */
-}
-
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
   }
-  100% {
-    transform: translateX(
-      calc(-100% / 2)
-    ); /* Adjust based on the number of items */
+
+  .search-bar,
+  .login-form {
+    width: 100%;
+    margin: 0.5rem 0;
   }
+
+  .search-bar input,
+  .login-form input,
+  .login-form button {
+    width: 90%; /* Adjust as needed for smaller screens */
+  }
+
+  .welcome-container h1 {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .welcome-container p {
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
+
+  /* Add more responsive styles as needed */
 }
 
-.carousel-item {
-  display: inline-block; /* Ensure items are inline */
-  margin-right: 20px;
-}
-
-.carousel-item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-
-.modal {
-  /* Modal styling goes here */
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondaryColor);
+  color: var(--accentColor);
 }
