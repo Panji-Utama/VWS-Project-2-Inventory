@@ -3,21 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory Admin Page</title>
+    <title>Admin Panel - Inventory Management System</title>
     <link rel="stylesheet" href="css/admin.css" />
   </head>
   <body>
-    <nav id="nav-container">
-      <div id="nav-left">
-        <img
-          src="https://visualpharm.com/assets/381/Admin-595b40b65ba036ed117d3b23.svg"
-          alt="Profile Pict"
-        />
-        <h1>Admin Sementara</h1>
+    <header>
+      <div class="navbar">
+        <div class="profile-info">
+          <img
+            src="path_to_profile_picture.jpg"
+            alt="Profile"
+            class="profile-pic"
+          />
+          <span class="username">Username</span>
+        </div>
+        <button class="logout-button">Logout</button>
       </div>
-      <div id="nav-right">
-        <button><a href="index.html">Logout</a></button>
+    </header>
+    <main>
+      <div class="admin-container">
+        <div class="item-table">
+          <table id="itemTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Image URL</th>
+                <th>Picture</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Items will be loaded here -->
+            </tbody>
+          </table>
+        </div>
+        <div class="add-item-section">
+          <h2>Add New Item</h2>
+          <form id="addItemForm">
+              <div class="form-group">
+                  <label for="itemName">Name:</label>
+                  <input type="text" id="itemName" name="itemName" required>
+              </div>
+              <div class="form-group">
+                  <label for="itemQuantity">Quantity:</label>
+                  <input type="number" id="itemQuantity" name="itemQuantity" required>
+              </div>
+              <div class="form-group">
+                  <label for="itemDescription">Description:</label>
+                  <textarea id="itemDescription" name="itemDescription" required></textarea>
+              </div>
+              <div class="form-group">
+                  <label for="itemImageUrl">Image URL:</label>
+                  <input type="url" id="itemImageUrl" name="itemImageUrl" required>
+              </div>
+              <button type="submit">Add Item</button>
+          </form>
       </div>
-    </nav>
+      
+      </div>
+    </main>
+    <script src="js/admin.js"></script>
   </body>
 </html>
