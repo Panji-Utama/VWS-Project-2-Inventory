@@ -18,6 +18,30 @@ connection.connect((error) => {
   console.log("Successfully connected to the database vws2-inventory");
 });
 
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+
+  const query = "SELECT * FROM users WHERE email = ?";
+  connection.query(query, [email], (err, results) => {
+    if (err) {
+      res.status(500).json({ success: false, message: "Database error" });
+      return;
+    }
+
+    if (results.length === 0) {
+      res.status(401).json({ success: false, message: "User not found" });
+      return;
+    }
+
+    const user = results[0];
+    if (user.password === password) {
+      res.json({ success: true, user });
+    } else {
+      res.status(401).json({ success: false, message: "Invalid credentials" });
+    }
+  });
+});
+
 app.get("/items", (req, res) => {
   connection.query("SELECT * FROM items", (error, results) => {
     if (error) throw error;
