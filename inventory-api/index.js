@@ -1,9 +1,12 @@
+// require("dotenv").config();
+
 const express = require("express");
 const mysql = require("mysql");
 const bodyParser = require("body-parser");
-
+const cors = require("cors");
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 // MySQL connection
 const connection = mysql.createConnection({
@@ -15,7 +18,7 @@ const connection = mysql.createConnection({
 
 connection.connect((error) => {
   if (error) throw error;
-  console.log("Successfully connected to the database vws2-inventory");
+  console.log(`Successfully connected to the database ${process.env.DB_NAME}`);
 });
 
 app.post("/login", (req, res) => {

@@ -21,82 +21,92 @@ body {
   padding: 1rem;
 }
 
-.navbar .profile-info {
+.profile-info {
   display: flex;
   align-items: center;
 }
 
-.navbar img {
+.profile-pic {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.username {
+  color: var(--accentColor);
+  font-size: 1.2rem;
+}
+
+#logout-button {
+  background-color: var(--thirdColor);
+  color: var(--accentColor);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .admin-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
   padding: 20px;
 }
 
 .item-table {
-  flex: 1;
-  min-width: 60%;
-  border: 1px solid var(--thirdColor);
-  padding: 10px;
+  flex: 1 1 70%; /* Adjust the flex-basis to 70% */
+  margin-right: 20px;
+  border: 1px solid var(--accentColor);
 }
 
 .add-item-section {
-  flex: 1;
-  min-width: 30%;
-  background-color: var(--thirdColor);
+  flex: 1 1 25%; /* Adjust the flex-basis to 25% */
   padding: 20px;
-  border-radius: 10px;
+  background-color: var(--thirdColor);
+  border: 1px solid var(--accentColor);
 }
 
-.item-table table {
+table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.item-table th, .item-table td {
-  text-align: left;
+th,
+td {
+  border: 1px solid var(--accentColor);
   padding: 8px;
-  border-bottom: 1px solid #ddd;
+  text-align: left;
 }
 
-.footer {
+footer {
   text-align: center;
-  padding: 1rem;
+  padding: 20px 0;
   background-color: var(--secondaryColor);
-  color: var(--accentColor);
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .admin-container {
-    flex-direction: column;
-  }
-
-  .item-table, .add-item-section {
-    min-width: 100%;
-  }
-
-  .item-table th, .item-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .item-table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    display: inline-block;
-    width: 100px;
+@media screen and (max-width: 850px) {
+  .navbar,
+  .add-item-section {
+    width: 100%; /* Ensures full width */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
   }
 
   .navbar {
-    flex-direction: column;
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: stretch; /* Stretches items to fill the width */
+  }
+
+  .profile-info,
+  .logout-button {
+    width: 100%; /* Full width for children of navbar */
+    justify-content: space-between; /* Spreads items across the width */
+  }
+
+  .item-table,
+  .add-item-section {
+    flex-basis: 100%; /* Full width for item table and add-item section */
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }

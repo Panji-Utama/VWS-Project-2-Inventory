@@ -11,7 +11,7 @@
       <div class="navbar">
         <div class="profile-info">
           <img
-            src="path_to_profile_picture.jpg"
+            src="https://img.lovepik.com/free-png/20211211/lovepik-video-teaching-icon-free-vector-illustration-png-image_401498175_wh1200.png"
             alt="Profile"
             class="profile-pic"
           />
@@ -42,26 +42,39 @@
         <div class="add-item-section">
           <h2>Add New Item</h2>
           <form id="addItemForm">
-              <div class="form-group">
-                  <label for="itemName">Name:</label>
-                  <input type="text" id="itemName" name="itemName" required>
-              </div>
-              <div class="form-group">
-                  <label for="itemQuantity">Quantity:</label>
-                  <input type="number" id="itemQuantity" name="itemQuantity" required>
-              </div>
-              <div class="form-group">
-                  <label for="itemDescription">Description:</label>
-                  <textarea id="itemDescription" name="itemDescription" required></textarea>
-              </div>
-              <div class="form-group">
-                  <label for="itemImageUrl">Image URL:</label>
-                  <input type="url" id="itemImageUrl" name="itemImageUrl" required>
-              </div>
-              <button type="submit">Add Item</button>
+            <div class="form-group">
+              <label for="itemName">Name:</label>
+              <input type="text" id="itemName" name="itemName" required />
+            </div>
+            <div class="form-group">
+              <label for="itemQuantity">Quantity:</label>
+              <input
+                type="number"
+                id="itemQuantity"
+                name="itemQuantity"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="itemDescription">Description:</label>
+              <textarea
+                id="itemDescription"
+                name="itemDescription"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="itemImageUrl">Image URL:</label>
+              <input
+                type="url"
+                id="itemImageUrl"
+                name="itemImageUrl"
+                required
+              />
+            </div>
+            <button type="submit" onclick="addNewItem()">Add Item</button>
           </form>
-      </div>
-      
+        </div>
       </div>
     </main>
     <script src="js/admin.js"></script>

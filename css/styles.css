@@ -5,22 +5,12 @@
   --accentColor: #ece3ce;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: var(--primaryColor);
   color: var(--accentColor);
-}
-
-main {
-  flex: 1;
 }
 
 .navbar {
@@ -54,49 +44,29 @@ main {
   cursor: pointer;
 }
 
-.welcome-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* Adjust height as needed */
+.welcome-text {
   text-align: center;
+  margin-top: 50px;
 }
 
-/* Responsive design */
-@media screen and (max-width: 768px) {
+footer {
+  text-align: center;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--secondaryColor);
+}
+
+@media screen and (max-width: 600px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .search-bar,
   .login-form {
     width: 100%;
-    margin: 0.5rem 0;
+    margin-top: 10px;
   }
-
-  .search-bar input,
-  .login-form input,
-  .login-form button {
-    width: 90%; /* Adjust as needed for smaller screens */
-  }
-
-  .welcome-container h1 {
-    font-size: 1.5rem; /* Smaller font size for smaller screens */
-  }
-
-  .welcome-container p {
-    font-size: 1rem; /* Smaller font size for smaller screens */
-  }
-
-  /* Add more responsive styles as needed */
-}
-
-/* Footer styles */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: var(--secondaryColor);
-  color: var(--accentColor);
 }
