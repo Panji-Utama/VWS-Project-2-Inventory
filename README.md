@@ -10,7 +10,7 @@ VWS-Project-2-Inventory is a web-based inventory management system designed as p
 - **Backend API**: Custom-built RESTful API for handling inventory data.
 
 ## Live Demo
-You can access the live version of the inventory management system at [this link](https://main--stalwart-conkies-b4167d.netlify.app/).
+You can access the live version of the inventory management system at <a href="https://main--stalwart-conkies-b4167d.netlify.app/" target="_blank">this link!</a>
 
 ## Local Setup
 To set up the project locally, follow these steps:
