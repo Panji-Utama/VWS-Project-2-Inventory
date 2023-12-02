@@ -44,8 +44,5 @@ For admin access, use the following credentials:
 - Email: admin@gmail.com
 - Password: admin
 
-## Contributing
-Contributions to this project are welcome. Please ensure to follow the existing code structure and style.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
