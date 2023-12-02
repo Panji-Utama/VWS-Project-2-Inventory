@@ -1,5 +1,11 @@
 # VWS-Project-2-Inventory
 
+<div align="center">
+  <a href="https://github-readme-tech-stack.vercel.app/api/cards?title=Tech+Stack&titleAlign=center&align=center&lineCount=2&theme=githu&line1=html5%2CHTML%2CE34F26%3Bcss3%2CCSS%2C1572B6%3Bjavascript%2CJS%2CF7DF1E%3B&line2=express%2CExpress%2C000000%3Bmysql%2CMySQL%2C4479A1%3B">
+    <img src="https://github-readme-tech-stack.vercel.app/api/cards?title=Tech+Stack&titleAlign=center&align=center&lineCount=2&theme=github&line1=html5%2CHTML%2CE34F26%3Bcss3%2CCSS%2C1572B6%3Bjavascript%2CJS%2CF7DF1E%3B&line2=express%2CExpress%2C000000%3Bmysql%2CMySQL%2C4479A1%3B" alt="Tech Stack" />
+  </a>
+</div>
+
 ## Overview
 VWS-Project-2-Inventory is a web-based inventory management system designed as part of the Vanilla Web Series. This project demonstrates a full-stack application built using Node.js, Express, and MySQL for the backend, with a frontend developed using vanilla HTML, CSS, and JavaScript. The application allows users to manage inventory items through CRUD operations and is designed to be responsive for use across various devices.
 
